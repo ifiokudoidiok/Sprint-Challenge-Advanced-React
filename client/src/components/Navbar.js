@@ -1,5 +1,6 @@
-import React from 'react';
-import {useDarkMode} from '../hooks/useDarkMode';
+import React from "react";
+import { useDarkMode } from "../hooks/useDarkMode";
+import cup from "../cup.png";
 
 const Navbar = () => {
   const [darkMode, setDarkMode] = useDarkMode(false);
@@ -9,11 +10,12 @@ const Navbar = () => {
   };
   return (
     <nav className="navbar">
-      <h1>Women's World Cup</h1>
+      <img className ='img-class' src={cup} />
+
       <div className="dark-mode__toggle">
         <div
           onClick={toggleMode}
-          className={darkMode ? 'toggle toggled' : 'toggle'}
+          className={darkMode ? "toggle toggled" : "toggle"}
         />
       </div>
     </nav>

@@ -1,7 +1,10 @@
 .App {
   text-align: center;
+  max-width: 95%;
 }
-
+.img-class{
+  max-height: 60px;
+}
 .App-logo {
   animation: App-logo-spin infinite 20s linear;
   height: 40vmin;
@@ -105,4 +108,7 @@ td, th {
 
 table:nth-child(even) {
   background-color: #413a3aa6;
+}
+img{
+  max-height: 100px;
 }
