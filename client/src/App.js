@@ -1,16 +1,14 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import logo from "./logo.svg";
+import "./App.css";
+import Players from "./components/Players";
 
 class App extends React.Component {
-  render(){
-
+  render() {
     return (
       <div className="App">
-       <h1>
-         Mic Check 1-2
-         </h1>
-          
+        <h1>TABLE:</h1>
+        <Players/>
       </div>
     );
   }
