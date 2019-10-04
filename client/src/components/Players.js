@@ -14,8 +14,6 @@ export default class Players extends React.Component {
     axios
       .get(playersAPI)
       .then(response => {
-        //   debugger;
-        console.log(response.data);
         this.setState({
           player: response.data
         });
@@ -28,19 +26,27 @@ export default class Players extends React.Component {
   render() {
     return (
       <>
+        <table>
+          <tbody>
+            <tr>
+              <th>S/N</th>
+              <th>Name</th>
+              <th>Country</th>
+              <th>Searches</th>
+            </tr>
+          </tbody>
+        </table>
         {this.state.player.map(player => {
           return (
             <table>
-                <tbody>
-              <tr>
-              <td> {player.id}</td>
-              <td> {player.name}</td>
-              <td> {player.country}</td>
-              <td>  {player.searches}</td>
-              </tr>
-                </tbody>
-
-                
+              <tbody>
+                <tr>
+                  <td> {player.id}</td>
+                  <td> {player.name}</td>
+                  <td> {player.country}</td>
+                  <td> {player.searches}</td>
+                </tr>
+              </tbody>
             </table>
           );
         })}
