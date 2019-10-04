@@ -13,7 +13,19 @@ class App extends React.Component {
     return (
       <div className="App">
         <Navbar/>
-        <h1>TABLE:</h1>
+        <h1>Statistics:</h1>
+        <table>
+      <tbody>
+
+      <tr>
+      <th>S/N</th>
+        <th>Name</th>
+        <th>Country</th>
+        <th>Searches</th>
+        
+      </tr>
+      </tbody>
+    </table>
         <Players/>
       </div>
     );
