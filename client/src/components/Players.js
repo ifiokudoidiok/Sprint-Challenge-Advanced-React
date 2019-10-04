@@ -9,12 +9,7 @@ export default class Players extends React.Component {
       player: []
     };
   }
-  // {
-  //     name: "",
-  //     country:"",
-  //     searches:"",
-  //     id:"",
-  // }
+
   componentDidMount() {
     axios
       .get(playersAPI)
@@ -35,14 +30,18 @@ export default class Players extends React.Component {
       <>
         {this.state.player.map(player => {
           return (
-            <>
-              
-              <h1> Name: {player.name}</h1>
-              <p>Country: {player.country}</p>
-              <p>Searches:  {player.searches}</p>
+            <table>
+                <tbody>
+              <tr>
+              <td> {player.id}</td>
+              <td> {player.name}</td>
+              <td> {player.country}</td>
+              <td>  {player.searches}</td>
+              </tr>
+                </tbody>
 
                 
-            </>
+            </table>
           );
         })}
       </>
